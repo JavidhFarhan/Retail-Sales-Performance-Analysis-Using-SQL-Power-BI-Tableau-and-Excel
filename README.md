@@ -3,47 +3,132 @@
 ## Objective:
 Conduct a comprehensive analysis of retail sales performance using SQL, Power BI, Tableau, and Excel, apply RFM segmentation to uncover customer behaviour patterns, and deliver actionable insights that strengthen retention, boost revenue, and guide strategic decision-making.
 
-Obtain the Dataset:
+## Core skills take away
+
+•	SQL: Writing queries to extract and analyze sales data from databases.
+
+•	Power BI: Building dynamic reports and dashboards to visualize sales insights.
+
+•	Tableau: Creating advanced interactive dashboards for deeper data storytelling.
+
+•	Excel: Data cleaning, pivot tables, and trend analysis for decision-making.
+
+•	Business Intelligence: Understanding key metrics for retail performance analysis.
+
+•	Data-Driven Decision Making: Applying data analytics for strategic improvements.
+
+## Approach:
+
+## Phase 1: Data Collection and Preprocessing
+
+•	Extract raw sales data from an SQL database.
+
+•	Clean and preprocess the data using SQL and Excel (handle missing values, remove duplicates, standardize data formats).
+
+## Phase 2: Exploratory Data Analysis (EDA)
+
+•	Conduct a descriptive analysis using SQL queries.
+
+•	Use Excel to create pivot tables for initial insights.
+
+•	Generate visualizations in Power BI and Tableau to explore trends in sales, customer demographics, and product performance.
+
+## Phase 3: Data Modeling and Dashboard Creation
+
+•	Build an interactive dashboard in Power BI and Tableau for real-time sales tracking.
+
+•	Apply filtering and drill-down options for deeper insights.
+
+•	Develop KPI indicators for revenue, profit margins, and customer retention.
+
+## Phase 4: Forecasting and Business Recommendations
+
+•	Use time-series analysis to predict future sales trends.
+
+•	Provide actionable recommendations for inventory management, marketing strategies, and pricing models.
+
+•	Create final reports summarizing findings and strategic business suggestions.
+
+## Obtain the Dataset:
+
 •	Access and retrieve the dataset from the specified source link.
+
 •	Perform an initial assessment of the dataset, focusing on column definitions, data types, and data completeness.
-Data Set Shape:
-Rows:525001
+
+## Data Set Shape:
+
+Rows:525001 ( Including Header)
+
 Columns: 8
+
 Dataset Columns: Invoice, Stock Code, Description, Quantity, Invoice Date, Price, Customer ID, Country
-Data Preparation and Transformation Steps
+
+## Data Preparation and Transformation Steps
+
 1. Apply ABS Function:
+
 Convert negative values in the Quantity and Price columns to positive using the ABS function.
+
 2. Create Sales Column:
+
 Add a new column calculating Sales as the product of Quantity × Price.
+
 3. Data Quality Checks:
+
 Identify and handle duplicates, null values, and blank entries to ensure dataset integrity.
+
 4. Standardize Country Names:
+
 Update the Country column by replacing “EIRE” with “Eire” and verify consistency with case sensitivity.
+
 5. Split Invoice Date:
+
 Separate the Invoice Date column into two fields: Invoice Date and Invoice Time. Confirm appropriate data types for both date and time.
+
 6. Customer Segmentation:
+
 Introduce a Customer Segment column based on Order Quantity:
+
 • 	≤10 → Basic
+
 • 	≤20 → Standard
+
 • 	≤30 → Premium
+
 • 	≤40 → Super Premium
+
 • 	≥41 → Bulk
+
 7. Rearrange Columns for Accessibility:
+
 Organize the dataset in the following order for easier analysis:
+
 Invoice Date, Invoice Time, Invoice, Customer ID, Country, Stock Code, Description, Quantity, Price, Sales, Customer Segment.
+
 •	Business Impact: They reveal top products, loyal customers, seasonal peaks, and geographic strengths.
+
 •	Dashboard KPIs: Feed directly into Power BI/Tableau visuals (Revenue by Country, Customer Segments, Daily Trends).
+
 •	Strategic Insights: Help optimize pricing, inventory, and marketing campaigns.
-Exploratory Data Analysis (EDA) Using SQL
+
+## Exploratory Data Analysis (EDA) Using SQL
+
 Import the data into Sql
+
 create schema retailsales;
+
 use retailsales;
+
 select * from retail_sales;
+
+<img width="1038" height="348" alt="image" src="https://github.com/user-attachments/assets/041725ea-0069-4b5c-b780-00b6f700eea0" />
 
  
 
 Data info: 52500 rows returned.
-Descriptive Analysis
+
+## Descriptive Analysis
+
 1.Product Level Analysis:
 A. Top Revenue Products
 SELECT 
