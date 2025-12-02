@@ -1,4 +1,5 @@
 # Retail-Sales-Performance-Analysis-Using-SQL-Power-BI-Tableau-and-Excel
+### https://drive.google.com/drive/folders/1As-_T1OQEPwNy07R9pEe0kTcCqc7JhLX?usp=sharing
 ## Objective:
 Conduct a comprehensive analysis of retail sales performance using SQL, Power BI, Tableau, and Excel, apply RFM segmentation to uncover customer behaviour patterns, and deliver actionable insights that strengthen retention, boost revenue, and guide strategic decision-making.
 
